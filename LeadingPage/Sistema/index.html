@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Junte-se a Tio's Tech!</title>
-    <link rel="shortcut icon" href="../Imagens/icone256PX.png" type="image/x-icon">
+    <link rel="shortcut icon" href="Imagens/icone256PX.png" type="image/x-icon">
     <link rel="stylesheet" href="index.css">
 
 </head>
@@ -17,7 +17,7 @@
     </header>
     <main>
         <div id="enunciado">
-            <h1>Lhe conectando com o mercado</h1>
+            <h1>Lhe conectando com o mercado.</h1>
         </div>
         <div id="video">
             <iframe src="https://www.youtube-nocookie.com/embed/3nQzKLG5Kns?controls=0" title="YouTube video player"
@@ -67,12 +67,44 @@
         </article>
         <section id="CTA">
             <div id="termos">
-                <input type="checkbox" id="TermosAfiliacao">
-                <label for="TermosAfiliacao"><a href="#">Termos de Afiliação</a></label>
+                <input type="checkbox" id="TermosAfiliacao" onclick="validador()">
+                <label for="TermosAfiliacao"><a href="https://termo-afiliacao.netlify.app/" target="_blank">Termos de Afiliação</a></label>
             </div>
-            <button id="Call">Junte-se a nós</button>
+            <div id="conteiner">
+                <button id="Call" onclick="indexador()">Junte-se a nós</button>
+            </div>
         </section>
     </main>
+
+    <script>
+        function validador(){
+            let check = document.getElementById("TermosAfiliacao")
+            if (check.checked == true){
+                return true
+            }
+            else{
+                return false
+            }
+        }
+        function indexador(){
+            let room = validador()
+            let site
+            if(room == true){
+                site = "https://forms.gle/oiTPvwhgzuCtj5689"
+                ancora(site)
+            }
+            else{
+                let requisito = document.getElementById("termos")
+                requisito.style.border = "2px solid red"
+                requisito.style.padding = "5px"
+                requisito.style.borderRadius = "8px"
+            }
+        }
+
+        function ancora(tag){
+            let janela = window.open(tag, "_self") 
+        }
+    </script>
 </body>
 
 </html>
