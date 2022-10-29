@@ -6,55 +6,75 @@
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Tio's Tech</title>
     <link rel="shortcut icon" href="../imagens/icone - 256px.png" type="image/x-icon">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <header>
         <h1>Tio's Tech</h1>
     </header>
-    <nav>
+    <nav class="hudmenu">
         <ul>
-            <li>Sobre</li>
-            <li>Faça Parte</li>
-            <li>Contato</li>
+            <li><a href="#Movimento">Sobre</a></li>
+            <span></span>
+            <li><a href="#entrar">Faça Parte</a></li>
+            <span></span>
+            <li><a href="#zap">Contato</a></li>
         </ul>
     </nav>
     <main>
         <section>
-            <h2 id="Movimento">Sobre o Movimento</h2>
+            <h2 id="Movimento" class="titulo">Sobre o Movimento</h2>
             <div id="video">
                 <iframe src="https://www.youtube.com/embed/WefGVt0L2YI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <article>
                 <p>
-                    Primeiramente o foco da Tio’s Tech é capacitar pessoas e participar do início de carreira delas. Sendo assim, somos um movimento que nasceu do imaginário do criador disto tudo: <a href="#">Sandson Soares</a>, com a intenção de juntar mais as pessoas e dar oportunidades a todos para poderem pôr em prática o estudo, além de agregar muito a pessoa posteriormente. Eu, Sandson espero poder ajudar a quem precisar e ser ajudado por essas pessoas, pois se trata de um movimento o qual está no começo e todo apoio é bem vindo.
+                    Primeiramente o foco da Tio’s Tech é capacitar pessoas e participar do início de carreira delas. Sendo assim, somos um movimento que nasceu do imaginário do criador disto tudo: <a href="https://sandsonsoares.github.io/PortfolioProject/" target="_blank">Sandson Soares</a>, com a intenção de juntar mais as pessoas e dar oportunidades a todos para poderem pôr em prática o estudo, além de agregar muito a pessoa posteriormente. Eu, Sandson espero poder ajudar a quem precisar e ser ajudado por essas pessoas, pois se trata de um movimento o qual está no começo e todo apoio é bem vindo.
                 </p>
             </article>
         </section>
-        <section>
-            <h2>Faça parte do movimento</h2>
+        <section id="fazerParte">
+            <h2 id="entrar">Faça parte do movimento</h2>
             <p>
                 Para fazer parte é muito fácil, apenas clique no botão logo abaixo para continuar. É bem intuitivo!
             </p>
             <div id="confirmBox">
-                <span id="help">?</span>
-                <a href="#" class="btn">Junte-se a nós!</a>
+                <p id="alert">Olá! Para acessar o formulário o senhor(a) deve clicar no botão, logo será direcionado para uma página sobre os termos de afiliação, após acordado com os termos, preencha o formulário e aguarde o contato do fundador do movimento (SandsonSoares)</p>
+                <span id="help" onclick="mostrar()">?</span>
+                <a href="https://tios-tech.netlify.app/" class="btn" target="_blank">Junte-se a nós!</a>    
             </div>
         </section>
     </main>
     <footer>
-        <h2>Siga nossas redes</h2>
-        <ul>
-            <li><a href="#"><img src="../imagens/github.png" alt="GitHub" id="git" class="icone"> <label for="git">GitHub</label></a></li>
-            <li><a href="#"><img src="../imagens/instagram.png" alt="Instagram" id="insta" class="icone"><label for="insta">Instagram</label></a></li>
-            <li><a href="#"><img src="../imagens/linkedin.png" alt="Linkedin" id="kedin" class="icone"><label for="kedin">Linkedin</label></a></li>
-        </ul>
-        <h2>Entre em contato pelo Whatsapp</h2>
-        <a href="#">
-            <div id="zap">
-                <img src="../imagens/whatsapp.png" alt="whatsapp" class="icone" id="zap">
-                <label for="zap">(21)98798-4554</label>
-            </div>
-        </a>
+        <section>
+            <h2>Siga nossas redes</h2>
+            <ul>
+                <li><a href="https://github.com/Tios-Tech" target="_blank"><img src="../imagens/github.png" alt="GitHub" id="git" class="icone"> <label for="git">GitHub</label></a></li>
+                <li><a href="https://www.instagram.com/sandson_contato/" target="_blank"><img src="../imagens/instagram.png" alt="Instagram" id="insta" class="icone"><label for="insta">Instagram</label></a></li>
+                <li><a href="https://www.linkedin.com/in/sandson-soares-bb7573232/" target="_blank"><img src="../imagens/linkedin.png" alt="Linkedin" id="kedin" class="icone"><label for="kedin">Linkedin</label></a></li>
+            </ul>
+        </section>
+        <section>
+            <h2>Entre em contato pelo Whatsapp</h2>
+            <a href="https://wa.me/message/QOC5DOS3QW3VB1" target="_blank">
+                <div id="zap">
+                    <img src="../imagens/whatsapp.png" alt="whatsapp" class="icone" id="zap">
+                    <label for="zap">(21)98798-4554</label>
+                </div>
+            </a>
+        </section>
     </footer>
+
+    <script>
+        function mostrar(){
+            let p = document.getElementById("alert")
+            if(p.style.display == 'none'){
+                p.style.display = 'block'
+            }
+            else{
+                p.style.display = 'none'
+            }
+        }
+    </script>
 </body>
 </html>
