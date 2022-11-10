@@ -86,7 +86,7 @@ section{
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.541);
 }
 article{
-    min-width: 375px;
+    min-width: 0;
     max-width: 800px;
     margin: auto;
 }
